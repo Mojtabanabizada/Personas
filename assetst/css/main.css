@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+a{
+    text-decoration: none;
+}
+
 body{
     margin: 0;
     width:100wv;
@@ -21,7 +25,7 @@ body header {
     background-color: #4f6457;
     justify-content:flex-start;
     box-shadow: 5px 5px 5px #888888;
-
+    
 }
 
 .header-left{
@@ -82,11 +86,119 @@ nav ul li{
 
 .header-bild{
     grid-area: bild;
-    height:300px;
+    height:400px;
+    background-image: url(../images/4.jpg);
+    background-size:cover;
+    
 }
-.header-bild img{
-    margin-top: 3px;
-    max-height: 400px;
-    max-width: 100vw;
-    box-shadow: 5px 5px 5px #888888;
+
+.wrapper{
+    grid-area: main;
+    
 }
+.header-wrapper{
+    grid-area: bild;
+    height:400px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 2fr;
+    grid-template-areas: 
+       "top-left top-right"
+        "bottom-left bottom-right";
+    grid-gap: 5px;
+        ;
+}
+
+.oval-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-area: top-right;
+    margin-top: 10px;
+}
+
+.header-wrapper .oval{
+    grid-area: top-right;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;  
+}
+.header-wrapper .oval:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+.header-wrapper .oval h2{
+    color: white;
+    width: 50%;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-wrapper .oval h4{
+    width: 50%;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tr-wrapper{
+    grid-area: top-left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-left: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.traingel{
+	border-bottom: 150px solid white;
+	border-left: 75px solid transparent;
+	border-right: 75px solid transparent;
+	height: 0;
+	width: 150px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);
+
+    
+}
+
+.re-wrapper{
+    grid-area: bottom-left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.re-wrapper .rectangel{
+    height: 120px;
+    width: 300px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.3);  
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
