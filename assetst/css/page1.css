@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 a{
     text-decoration: none;
 }
@@ -89,121 +90,58 @@ nav ul li{
 /****************************/
 /*      3D Header bild      */
 /****************************/
-
-.view {
+.bild-wrapper{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 300px;
-    margin: 10px;
-    float: left;
-    border: 10px solid #fff;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    box-shadow: 1px 1px 2px #e6e6e6;
-    cursor: default;
-    background: #fff url(../images/bgimg.jpg) no-repeat center center
+    background-image: url(../images/2.jpg);
+    background-size: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    filter: grayscale(100);
+    transition: all .7s;
 }
-.view .mask, .view .content {
-    width: 100%;
-    height: 300px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0
-}
-.view img {
-    display: block;
-    position: relative
-}
-.view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0
-}
-.view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center
-}
-.view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000
-}
-.view a.info:hover {
-    box-shadow: 0 0 5px #000
+.bild-wrapper:hover{
+    filter: grayscale(0);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-
-
-
-
-
-
-
-
-.view-first img { 
-    transition: all 0.2s linear;
-}
-.view-first .mask {
+.hidden{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
     opacity: 0;
-    background-color: rgba(219,127,8, 0.7); 
-    transition: all 0.4s ease-in-out;
+    transition: width .7s;
 }
-.view-first h2 {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
+.hidden:hover{
+    width: 95%;
+    opacity: .8;
+    border-top: 1px solid black;
+    border-bottom: 30px solid black;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.view-first p { 
-    transform: translateY(100px);
-    opacity: 0;
-	transition: all 0.2s linear;
+.hidden h2, .hidden h3{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 1px;
+    margin-left: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
 }
-.view-first a.info{
-    opacity: 0;
-	transition: all 0.2s ease-in-out;
+.hidden h2{
+    background-color: black;
 }
-
-
-
-
-.view-first:hover img { 
-	transform: scale(1.1);
-} 
-.view-first:hover .mask { 
-	opacity: 1;
+.hidden h3{
+    background-color: red;
 }
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a.info {
-    opacity: 1;
-    transform: translateY(0px);
-}
-.view-first:hover p {
-    transition-delay: 0.1s;
-}
-.view-first:hover a.info {
-    transition-delay: 0.2s;
-}
-
-
-
-
-
-
 
 
